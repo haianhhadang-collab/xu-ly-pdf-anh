@@ -2,6 +2,21 @@
 
 Ứng dụng quét, làm sạch, nắn phẳng, nhận dạng và chỉnh sửa tài liệu. Mọi xử lý chạy trên máy, không gửi dữ liệu đi đâu.
 
+## Lấy dự án về máy khác
+Dự án nằm ở hai kho GitHub công khai (mã Flutter để riêng vì Gradle lỗi với đường dẫn có dấu):
+- Tài liệu, nhật ký, wiki, nguyên mẫu PC: https://github.com/haianhhadang-collab/xu-ly-pdf-anh
+- Mã ứng dụng Flutter (Android, iOS): https://github.com/haianhhadang-collab/xu-ly-pdf-anh-flutter
+- Tệp APK mới nhất: mục *Releases* của kho Flutter (tải thẳng trên điện thoại Android).
+
+```bash
+git clone https://github.com/haianhhadang-collab/xu-ly-pdf-anh.git "Xử lý PDF"
+git clone https://github.com/haianhhadang-collab/xu-ly-pdf-anh-flutter.git xlpdf
+```
+
+Trên Windows đặt `xlpdf` ở đường dẫn không dấu (ví dụ `D:\DevTools\src\xlpdf`), rồi tạo lại liên kết `ung-dung-flutter` trong thư mục dự án nếu cần (`mklink /J ung-dung-flutter D:\DevTools\src\xlpdf`).
+
+Không có trên kho: các tệp APK (`apk/`); kết quả và ảnh chụp của người dùng (`ket-qua/`, `ung-dung/kiem_thu/trang_sach/`, bộ ảnh thử `D:\DevTools\src\xlpdf_kiemthu`); ảnh thử tổng hợp sinh lại được bằng `python ung-dung/kiem_thu/tao_anh_mep.py`, `tao_anh_sach_mo.py`.
+
 ## Nội dung thư mục
 - `01-prompt-ke-hoach.md`: prompt lập kế hoạch.
 - `02-ke-hoach-ung-dung.md`: bản kế hoạch phát triển (Flutter + C++/OpenCV cho Android, iOS, PC).
