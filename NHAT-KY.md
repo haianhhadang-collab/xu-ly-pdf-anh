@@ -2,6 +2,14 @@
 
 Mục mới ghi ở đầu file.
 
+## 2026-11-16 · Đưa dự án lên GitHub (công khai) để dùng ở máy khác
+- **Yêu cầu**: đẩy lên git, để chế độ chia sẻ, dùng ở máy khác (người dùng cũng hỏi cài bản 0.7.9 lên iOS: APK không cài được lên iPhone; bản iOS cần máy Mac để dựng, chưa làm).
+- **Đã làm**: hai kho công khai trên tài khoản GitHub `haianhhadang-collab` (người commit đặt riêng trong mỗi kho, dùng địa chỉ noreply của GitHub):
+  - https://github.com/haianhhadang-collab/xu-ly-pdf-anh : thư mục dự án (kế hoạch, nhật ký, yêu cầu, wiki, thiết kế, nguyên mẫu PC). Không đưa lên: `apk/`, `ket-qua/`, ảnh trang sách chụp thật `ung-dung/kiem_thu/trang_sach/`, ảnh thử tổng hợp sinh lại được, liên kết `ung-dung-flutter` (`.gitignore`). README có mục *Lấy dự án về máy khác*.
+  - https://github.com/haianhhadang-collab/xu-ly-pdf-anh-flutter : mã Flutter (`D:\DevTools\src\xlpdf`, để riêng vì Gradle lỗi với đường dẫn có dấu). Bỏ `android/build/`, `*.log`. Thẻ `v0.7.9`, mục Releases có `xu-ly-pdf-anh-0.7.9.apk`.
+  - Đã dò trước khi đẩy: không có email, số điện thoại, khóa ký; bộ ảnh thử `D:\DevTools\src\xlpdf_kiemthu` (ảnh của người dùng) không đưa lên.
+- **Từ nay**: sửa xong thì commit và đẩy cả hai kho (`git push`); APK mới đưa lên Releases của kho Flutter.
+
 ## 2026-11-16 · Báo nhòe ngay trên màn camera, dò trang chụp trùng, rung báo đúng lúc chụp (bản Android 0.7.9, nguyên mẫu PC)
 - **Yêu cầu**: báo nhòe ngay trên màn camera; tự rà soát xem còn cần làm gì thì làm luôn.
 - **Rà soát** (hồ sơ 214 trang `Hồ sơ 15-11 19-33.pdf`, mã màn camera):

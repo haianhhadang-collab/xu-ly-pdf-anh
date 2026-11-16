@@ -198,3 +198,6 @@
 ## [2026-11-16] lint | Lượt quét tự động (tối muộn): không có nội dung mới
 - Bỏ qua: `ung-dung-flutter/README.md` (vẫn bản sửa lúc 08:21, đã nạp vào [[readme-ung-dung-flutter]]; tệp hiện lại do mốc cắt micro giây, lượt này ghi mốc .843724).
 - Trang sửa: không có.
+
+## [2026-11-16] update | Đưa dự án lên GitHub
+- Hai kho công khai `xu-ly-pdf-anh` (dự án, wiki, nguyên mẫu PC) và `xu-ly-pdf-anh-flutter` (mã Flutter, APK ở Releases); ảnh của người dùng không đưa lên ([[ban-android-flutter]], [[nguyen-mau-windows]]).

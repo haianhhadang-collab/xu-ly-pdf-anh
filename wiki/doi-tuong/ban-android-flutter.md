@@ -118,3 +118,6 @@ Xem thêm: [[flutter-loi-cpp]].
 
 ## Bản 0.7.9 (2026-11-16)
 - Báo nhòe, tay che ngay trên màn camera sau mỗi ảnh, nút Chụp lại thay ảnh vừa rồi; rung báo khi máy đã chụp xong (trước đây rung lúc bắt đầu lấy nét, người dùng lật trang sớm); báo trang chụp trùng ở Xem nhanh ([[tu-dong-chup]], [[kiem-thu]], [[ho-so-15-11-sach-214-trang]]). OpenCV dựng thêm `features2d`, `flann` ([[giay-phep-thu-vien]]). APK `apk/xu-ly-pdf-anh-0.7.9.apk`.
+
+## Kho mã (2026-11-16)
+- Mã Flutter ở kho công khai https://github.com/haianhhadang-collab/xu-ly-pdf-anh-flutter ; APK 0.7.9 ở mục Releases. Chưa có bản iOS (cần máy Mac để dựng).
