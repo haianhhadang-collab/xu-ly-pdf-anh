@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Chỉnh trang</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0A5F8F;text-decoration:none}a:hover{color:#074A70}
+input[type=range]{accent-color:#0A5F8F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F4F6F8; color: #15202B; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="display: flex; align-items: center; gap: 8px; padding: 14px 12px 6px">
+    <a href="Trang.dc.html" aria-label="Quay lại" style="width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"></path></svg>
+    </a>
+    <h1 style="margin: 0; flex: 1; font-size: 18px; font-weight: 700">Trang 2 / 6</h1>
+    <a href="Trang.dc.html" style="height: 40px; padding: 0 18px; border-radius: 20px; background: #0A5F8F; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center">Xong</a>
+  </header>
+
+  <div style="display: flex; justify-content: center; padding: 4px 0 8px">
+    <div role="group" aria-label="Chế độ xem" style="display: flex; padding: 3px; border-radius: 999px; background: #E3E8EC">
+      <sc-for list="{{che}}" as="c" hint-placeholder-count="2">
+        <button aria-pressed="{{c.chon}}" onClick="{{c.pick}}" style="{{c.kieu}}">{{c.ten}}</button>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="flex: 1; min-height: 0; position: relative; margin: 0 16px; border-radius: 18px; background: {{nenXem}}; overflow: hidden">
+    <div aria-hidden="true" style="{{giayKieu}}">
+      <span style="height: 6px; width: 46%; background: #4A4A4A; border-radius: 2px; align-self: center; margin-bottom: 8px"></span>
+      <span style="height: 4px; width: 100%; background: #6E6E6E; border-radius: 2px"></span>
+      <span style="height: 4px; width: 94%; background: #6E6E6E; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #6E6E6E; border-radius: 2px"></span>
+      <span style="height: 4px; width: 72%; background: #6E6E6E; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #6E6E6E; border-radius: 2px; margin-top: 8px"></span>
+      <span style="height: 4px; width: 88%; background: #6E6E6E; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #6E6E6E; border-radius: 2px"></span>
+      <span style="height: 4px; width: 60%; background: #6E6E6E; border-radius: 2px"></span>
+      <span style="width: 54px; height: 54px; border-radius: 50%; border: 3px solid #C8443A; margin: 18px 0 0 auto; box-sizing: border-box"></span>
+      <span style="height: 3px; width: 34%; background: #2F5DA8; border-radius: 2px; margin: -26px 18px 0 auto; transform: rotate(-8deg)"></span>
+    </div>
+    <sc-if value="{{xemGoc}}" hint-placeholder-val="{{true}}">
+      <svg aria-hidden="true" width="358" height="420" viewBox="0 0 358 420" style="position: absolute; left: 0; top: 0">
+        <polygon points="58,42 300,36 312,388 46,394" fill="rgba(255,160,48,0.10)" stroke="#E07A00" stroke-width="2.5"></polygon>
+        <circle cx="58" cy="42" r="11" fill="#FFFFFF" stroke="#E07A00" stroke-width="3"></circle>
+        <circle cx="300" cy="36" r="11" fill="#FFFFFF" stroke="#E07A00" stroke-width="3"></circle>
+        <circle cx="312" cy="388" r="11" fill="#FFFFFF" stroke="#E07A00" stroke-width="3"></circle>
+        <circle cx="46" cy="394" r="11" fill="#FFFFFF" stroke="#E07A00" stroke-width="3"></circle>
+      </svg>
+    </sc-if>
+  </div>
+  <p style="margin: 6px 16px 0; font-size: 12px; color: #5A6672; text-align: center">{{goiY}}</p>
+
+  <div role="toolbar" aria-label="Công cụ trang" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 10px 16px 6px">
+    <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 56px; border: 0; background: transparent; font-family: inherit; font-size: 11px; color: #15202B; cursor: pointer">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v4h4"></path></svg>
+      Xoay
+    </button>
+    <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 56px; border: 0; background: transparent; font-family: inherit; font-size: 11px; color: #15202B; cursor: pointer">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg>
+      Tự tìm khung
+    </button>
+    <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 56px; border: 0; background: transparent; font-family: inherit; font-size: 11px; color: #15202B; cursor: pointer">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="1.8" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path></svg>
+      Không cắt
+    </button>
+    <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 56px; border: 0; background: transparent; font-family: inherit; font-size: 11px; color: #A33A31; cursor: pointer">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A33A31" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"></path></svg>
+      Xóa trang
+    </button>
+  </div>
+
+  <section aria-label="Làm sạch" style="margin: 0 12px 12px; padding: 14px; border-radius: 18px; background: #FFFFFF; border: 1px solid #E6EAEE; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; gap: 6px; flex-wrap: wrap">
+      <sc-for list="{{lamSach}}" as="m" hint-placeholder-count="4">
+        <button aria-pressed="{{m.chon}}" onClick="{{m.pick}}" style="{{m.kieu}}">{{m.ten}}</button>
+      </sc-for>
+    </div>
+    <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #3B4752">
+      Độ trắng nền
+      <input type="range" min="0" max="100" value="50" style="width: 100%; margin: 0">
+    </label>
+    <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #3B4752">
+      Độ đậm chữ
+      <input type="range" min="0" max="100" value="50" style="width: 100%; margin: 0">
+    </label>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { xem: 'ketqua', mode: 'giu_mau' };
+  }
+  renderVals() {
+    const xemGoc = this.state.xem === 'goc';
+    const pill = 'min-height: 36px; padding: 0 16px; border: 0; border-radius: 999px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; ';
+    const che = [{ id: 'ketqua', ten: 'Kết quả' }, { id: 'goc', ten: 'Ảnh gốc, khung cắt' }].map((c) => {
+      const chon = this.state.xem === c.id;
+      return { ...c, chon, kieu: pill + (chon ? 'background: #FFFFFF; color: #15202B; box-shadow: 0 1px 2px rgba(21,32,43,0.12)' : 'background: transparent; color: #3B4752'),
+        pick: () => this.setState({ xem: c.id }) };
+    });
+    const chip = 'min-height: 36px; padding: 0 12px; border-radius: 999px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; ';
+    const lamSach = [
+      { id: 'giu_mau', ten: 'Giữ màu' }, { id: 'xam', ten: 'Xám' },
+      { id: 'den_trang', ten: 'Đen trắng' }, { id: 'khong', ten: 'Không làm sạch' }
+    ].map((m) => {
+      const chon = this.state.mode === m.id;
+      return { ...m, chon, kieu: chip + (chon ? 'border: 1px solid #0A5F8F; background: #E3F0F7; color: #074A70' : 'border: 1px solid #DDE3E8; background: #FFFFFF; color: #15202B'),
+        pick: () => this.setState({ mode: m.id }) };
+    });
+    const giay = 'position: absolute; left: 58px; top: 42px; width: 242px; height: 346px; border-radius: 2px; display: flex; flex-direction: column; gap: 7px; padding: 26px 22px; box-sizing: border-box; ';
+    const mode = this.state.mode;
+    let mauGiay = '#FFFFFF';
+    if (xemGoc) mauGiay = 'linear-gradient(135deg, #EFE6D2 40%, #B7AC97 100%)';
+    else if (mode === 'xam') mauGiay = '#FAFAFA';
+    else if (mode === 'khong') mauGiay = '#EFE6D2';
+    return {
+      che, lamSach, xemGoc,
+      nenXem: xemGoc ? '#5A4433' : '#DCE2E7',
+      giayKieu: giay + 'background: ' + mauGiay + (xemGoc ? '; transform: perspective(700px) rotateX(6deg) rotateZ(-1deg)' : '; box-shadow: 0 4px 14px rgba(21,32,43,0.12)')
+        + (mode === 'xam' || mode === 'den_trang' ? '; filter: grayscale(1)' : '') + (mode === 'den_trang' ? ' contrast(1.6)' : ''),
+      goiY: xemGoc ? 'Kéo 4 góc màu cam để chỉnh khung cắt; thả tay là trang được xử lý lại' : 'Nền trắng đều, giữ màu con dấu và chữ ký'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Chụp tài liệu</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#FFFFFF;text-decoration:none}a:hover{color:#D6E8F2}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #0E1316; color: #FFFFFF; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="display: flex; align-items: center; gap: 8px; padding: 14px 12px 10px">
+    <a href="Main.dc.html" aria-label="Quay lại" style="width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08)">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"></path></svg>
+    </a>
+    <div role="group" aria-label="Loại tài liệu" style="display: flex; padding: 3px; border-radius: 999px; background: rgba(255,255,255,0.1); margin-right: auto">
+      <sc-for list="{{loai}}" as="l" hint-placeholder-count="2">
+        <button aria-pressed="{{l.chon}}" onClick="{{l.pick}}" style="{{l.kieu}}">{{l.ten}}</button>
+      </sc-for>
+    </div>
+    <button aria-label="Đèn" style="width: 44px; height: 44px; border-radius: 22px; border: 0; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; cursor: pointer">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"><path d="M13 3L5 14h6l-1 7 8-11h-6z"></path></svg>
+    </button>
+  </header>
+
+  <div style="flex: 1; min-height: 0; position: relative; margin: 0 12px; border-radius: 20px; overflow: hidden; background: #3B2A1E">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: repeating-linear-gradient(90deg, #4A3526 0px, #3E2C1F 18px, #4A3526 36px)"></div>
+    <div aria-hidden="true" style="position: absolute; left: 62px; top: 70px; width: 242px; height: 342px; background: #F3EEE2; border-radius: 3px; transform: perspective(700px) rotateX(9deg) rotateZ(-1.5deg); box-shadow: 0 10px 24px rgba(0,0,0,0.35); display: flex; flex-direction: column; gap: 7px; padding: 26px 22px; box-sizing: border-box">
+      <span style="height: 6px; width: 46%; background: #6B6B6B; border-radius: 2px; align-self: center; margin-bottom: 10px"></span>
+      <span style="height: 4px; width: 100%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 94%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 72%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #9A9A9A; border-radius: 2px; margin-top: 8px"></span>
+      <span style="height: 4px; width: 88%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 96%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 60%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #9A9A9A; border-radius: 2px; margin-top: 8px"></span>
+      <span style="height: 4px; width: 90%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 100%; background: #9A9A9A; border-radius: 2px"></span>
+      <span style="height: 4px; width: 80%; background: #9A9A9A; border-radius: 2px"></span>
+    </div>
+    <svg aria-hidden="true" width="366" height="560" viewBox="0 0 366 560" style="position: absolute; left: 0; top: 0">
+      <polygon points="{{khungDiem}}" fill="{{khungNen}}" stroke="{{khungMau}}" stroke-width="3" stroke-linejoin="round"></polygon>
+    </svg>
+
+    <div style="position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center">
+      <div role="status" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px 10px 12px; border-radius: 999px; background: rgba(14,19,22,0.82)">
+        <sc-if value="{{tuDong}}" hint-placeholder-val="{{true}}">
+          <svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26">
+            <circle cx="13" cy="13" r="10" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"></circle>
+            <circle cx="13" cy="13" r="10" fill="none" stroke="#3CCB7F" stroke-width="3" stroke-linecap="round" stroke-dasharray="44 63" transform="rotate(-90 13 13)"></circle>
+          </svg>
+        </sc-if>
+        <span style="font-size: 15px; font-weight: 600">{{loiNhac}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px 6px">
+    <span style="font-size: 13px; color: #B7C2CB">Tự động chụp</span>
+    <button aria-pressed="{{tuDong}}" aria-label="Bật tắt tự động chụp" onClick="{{doiTuDong}}" style="{{congTac}}">
+      <span style="{{nutCongTac}}"></span>
+    </button>
+  </div>
+
+  <footer style="display: flex; align-items: center; justify-content: space-between; padding: 8px 24px 26px">
+    <a href="Trang.dc.html" aria-label="Xem 5 trang đã chụp" style="position: relative; width: 52px; height: 66px">
+      <span aria-hidden="true" style="position: absolute; left: 6px; top: 0; width: 44px; height: 60px; border-radius: 5px; background: #D9DEE2"></span>
+      <span aria-hidden="true" style="position: absolute; left: 0; top: 6px; width: 44px; height: 60px; border-radius: 5px; background: #FFFFFF; border: 1px solid #C9D0D6; box-sizing: border-box"></span>
+      <span style="position: absolute; right: -6px; top: -6px; min-width: 22px; height: 22px; border-radius: 11px; background: #0A5F8F; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">5</span>
+    </a>
+    <button aria-label="Chụp ngay" style="width: 78px; height: 78px; border-radius: 39px; border: 4px solid #FFFFFF; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0">
+      <span style="width: 62px; height: 62px; border-radius: 31px; background: #FFFFFF"></span>
+    </button>
+    <a href="Trang.dc.html" style="min-width: 64px; height: 44px; padding: 0 16px; border-radius: 22px; background: #FFFFFF; color: #15202B; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center">Xong</a>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tuDong: true, loai: 'sach' };
+  }
+  renderVals() {
+    const tuDong = this.state.tuDong;
+    const pill = 'min-height: 38px; padding: 0 14px; border: 0; border-radius: 999px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; ';
+    const loai = [
+      { id: 'giay', ten: 'Giấy rời' },
+      { id: 'sach', ten: 'Sách' }
+    ].map((l) => {
+      const chon = this.state.loai === l.id;
+      return { ...l, chon, kieu: pill + (chon ? 'background: #FFFFFF; color: #15202B' : 'background: transparent; color: #FFFFFF'),
+        pick: () => this.setState({ loai: l.id }) };
+    });
+    return {
+      loai,
+      tuDong,
+      loiNhac: tuDong ? 'Giữ yên, sắp chụp…' : 'Bấm nút tròn để chụp',
+      khungDiem: '66,84 300,77 312,420 52,428',
+      khungMau: tuDong ? '#3CCB7F' : '#FFFFFF',
+      khungNen: tuDong ? 'rgba(60,203,127,0.10)' : 'rgba(255,255,255,0.06)',
+      congTac: 'width: 52px; height: 32px; border-radius: 16px; border: 0; padding: 3px; cursor: pointer; display: flex; align-items: center; '
+        + (tuDong ? 'background: #3CCB7F; justify-content: flex-end' : 'background: #4A555E; justify-content: flex-start'),
+      nutCongTac: 'width: 26px; height: 26px; border-radius: 13px; background: #FFFFFF; display: block',
+      doiTuDong: () => this.setState({ tuDong: !tuDong })
+    };
+  }
+}
+</script>
+</body>
+</html>

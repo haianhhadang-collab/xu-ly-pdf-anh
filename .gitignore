@@ -1,0 +1,17 @@
+# Tệp APK lớn: tải ở mục Releases của kho xu-ly-pdf-anh-flutter
+apk/
+# Kết quả, tài liệu của người dùng: không đưa lên kho
+ket-qua/
+# Mã Flutter ở kho riêng (Gradle lỗi với đường dẫn có dấu nên mã đặt ở D:\DevTools\src\xlpdf)
+ung-dung-flutter
+# Ảnh thử sinh lại được bằng script (tao_anh_mep.py, tao_anh_sach_mo.py) và kết quả chạy thử
+ung-dung/kiem_thu/anh_mau_mep/
+ung-dung/kiem_thu/anh_mau_mep_nn/
+ung-dung/kiem_thu/anh_sach_mo/
+ung-dung/kiem_thu/ket_qua/
+# Ảnh trang sách chụp thật của người dùng
+ung-dung/kiem_thu/trang_sach/
+__pycache__/
+*.pyc
+*.log
+.obsidian/workspace*.json

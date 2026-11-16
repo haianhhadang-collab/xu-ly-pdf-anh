@@ -1,0 +1,10 @@
+opencv-python>=4.8
+numpy
+Pillow
+pillow-heif
+pypdfium2
+pypdf
+reportlab
+pytesseract
+watchdog
+tkinterdnd2

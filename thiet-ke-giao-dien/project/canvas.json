@@ -1,0 +1,19 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-29T10:30:00Z"},
+  "title": "Giao diện Xử lý PDF ảnh – Android",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "1 · Hồ sơ (trang chủ)", "is_interactive": true, "radius": 28},
+    "Camera.dc.html": {"x": 470, "y": 0, "w": 390, "h": 844, "title": "2 · Chụp, tự động chụp", "is_interactive": true, "radius": 28},
+    "Trang.dc.html": {"x": 940, "y": 0, "w": 390, "h": 844, "title": "3 · Các trang của hồ sơ", "is_interactive": true, "radius": 28},
+    "Sua.dc.html": {"x": 1410, "y": 0, "w": 390, "h": 844, "title": "4 · Chỉnh trang", "is_interactive": true, "radius": 28},
+    "Xuat.dc.html": {"x": 1880, "y": 0, "w": 390, "h": 844, "title": "5 · Xuất PDF", "is_interactive": true, "radius": 28}
+  },
+  "order": ["Main.dc.html", "Camera.dc.html", "Trang.dc.html", "Sua.dc.html", "Xuat.dc.html"],
+  "notes": {
+    "tieude": {"x": 0, "y": -300, "text": "Xử lý PDF ảnh · luồng chính trên điện thoại", "kind": "title1", "maxW": 2270}
+  },
+  "designSystems": []
+}

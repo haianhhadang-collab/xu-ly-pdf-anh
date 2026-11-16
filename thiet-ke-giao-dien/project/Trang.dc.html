@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Các trang của hồ sơ</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0A5F8F;text-decoration:none}a:hover{color:#074A70}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F4F6F8; color: #15202B; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="display: flex; align-items: center; gap: 8px; padding: 14px 12px 6px">
+    <a href="Main.dc.html" aria-label="Quay lại" style="width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"></path></svg>
+    </a>
+    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column">
+      <h1 style="margin: 0; font-size: 18px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sách: Lịch sử văn hóa – chương 3</h1>
+      <span style="font-size: 12px; color: #5A6672">6 trang · chạm một trang để chỉnh</span>
+    </div>
+    <button aria-label="Thêm tùy chọn" style="width: 44px; height: 44px; border-radius: 22px; border: 0; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#15202B"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg>
+    </button>
+  </header>
+
+  <div style="flex: 1; min-height: 0; overflow: hidden; padding: 10px 16px 0">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+      <sc-for list="{{trang}}" as="t" hint-placeholder-count="6">
+        <a href="Sua.dc.html" aria-label="Chỉnh trang {{t.so}}" style="display: flex; flex-direction: column; gap: 6px; align-items: center; color: #15202B">
+          <span style="{{t.khung}}">
+            <span style="height: 4px; width: 50%; background: #8E989F; border-radius: 2px; align-self: center; margin-bottom: 4px"></span>
+            <span style="height: 3px; width: 100%; background: #C3CAD0; border-radius: 2px"></span>
+            <span style="height: 3px; width: 92%; background: #C3CAD0; border-radius: 2px"></span>
+            <span style="height: 3px; width: 100%; background: #C3CAD0; border-radius: 2px"></span>
+            <span style="height: 3px; width: 70%; background: #C3CAD0; border-radius: 2px"></span>
+            <span style="height: 3px; width: 100%; background: #C3CAD0; border-radius: 2px; margin-top: 5px"></span>
+            <span style="height: 3px; width: 86%; background: #C3CAD0; border-radius: 2px"></span>
+            <span style="height: 3px; width: 100%; background: #C3CAD0; border-radius: 2px"></span>
+            <sc-if value="{{t.dangXuLy}}" hint-placeholder-val="{{false}}">
+              <span style="position: absolute; inset: 0; background: rgba(244,246,248,0.78); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #8A4B00">Đang xử lý</span>
+            </sc-if>
+          </span>
+          <span style="font-size: 12px; font-weight: 600; color: #5A6672">{{t.so}}</span>
+        </a>
+      </sc-for>
+      <a href="Camera.dc.html" style="display: flex; flex-direction: column; gap: 6px; align-items: center; color: #0A5F8F">
+        <span style="width: 100%; aspect-ratio: 1 / 1.414; border-radius: 8px; border: 2px dashed #9DB9CB; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; box-sizing: border-box">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A5F8F" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          <span style="font-size: 12px; font-weight: 600">Chụp thêm</span>
+        </span>
+        <span style="font-size: 12px; color: transparent">·</span>
+      </a>
+    </div>
+  </div>
+
+  <div style="margin: 0 12px 12px; padding: 14px; border-radius: 18px; background: #FFFFFF; border: 1px solid #E6EAEE; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #1B6B43">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B7F4B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"></path></svg>
+      Nền đã làm trắng, giữ màu dấu và chữ ký
+    </div>
+    <div style="display: flex; gap: 10px">
+      <button style="flex: 1; height: 48px; border-radius: 14px; border: 1px solid #DDE3E8; background: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; color: #15202B; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round"><path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3"></path></svg>
+        Sắp xếp
+      </button>
+      <a href="Xuat.dc.html" style="flex: 1.4; height: 48px; border-radius: 14px; background: #0A5F8F; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"></path><path d="M14 3v4h4"></path></svg>
+        Xuất PDF
+      </a>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const base = 'position: relative; width: 100%; aspect-ratio: 1 / 1.414; border-radius: 6px; background: #FFFFFF; display: flex; flex-direction: column; gap: 4px; padding: 12px 10px; box-sizing: border-box; overflow: hidden; ';
+    const trang = [1, 2, 3, 4, 5, 6].map((so) => ({
+      so,
+      dangXuLy: so === 6,
+      khung: base + (so === 2 ? 'border: 2px solid #0A5F8F; box-shadow: 0 0 0 3px #CFE3EF' : 'border: 1px solid #DDE3E8; box-shadow: 0 1px 2px rgba(21,32,43,0.06)')
+    }));
+    return { trang };
+  }
+}
+</script>
+</body>
+</html>
